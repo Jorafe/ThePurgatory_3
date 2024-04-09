@@ -13,14 +13,14 @@ public class GroundSensor : MonoBehaviour
 
     void Awake ()
     {
-        /*anim = GetComponentInParent<Animator>();*/
+        anim = GetComponentInParent<Animator>();
         playerScript = GetComponentInParent<PlayerMovement>();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         isGrounded = true;
-        /*anim.SetBool("IsJumping", false);*/
+        anim.SetBool("IsJumping", false);
     }
 
     void OnTriggerExit2D(Collider2D collider)

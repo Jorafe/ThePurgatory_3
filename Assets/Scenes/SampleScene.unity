@@ -24568,6 +24568,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &720212512
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.99212
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.8085055
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722870813654530634, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_Name
+      value: Moneda Oro (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
 --- !u!1 &721280251
 GameObject:
   m_ObjectHideFlags: 0
@@ -55728,6 +55785,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1590164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1641699683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.503249
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.5729237
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722870813654530634, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_Name
+      value: Moneda Oro (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
 --- !u!1 &1642108216
 GameObject:
   m_ObjectHideFlags: 0
@@ -71241,6 +71355,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289f8cd09f668264f8a714ab6e233b66, type: 3}
+--- !u!1001 &7435696989880077004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.814
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 662209968488060849, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722870813654530634, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
+      propertyPath: m_Name
+      value: Moneda Oro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cfc7eb18e2f2d204fa6981da07bd4b2e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -71249,3 +71420,6 @@ SceneRoots:
   - {fileID: 1847184547}
   - {fileID: 635263636}
   - {fileID: 1895297068}
+  - {fileID: 7435696989880077004}
+  - {fileID: 1641699683}
+  - {fileID: 720212512}

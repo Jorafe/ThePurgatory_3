@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -173,7 +173,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 111
+        width: 128
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72950f9747591ef499f1833abf8f658c
+      internalID: -539836695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 111
+        width: 110
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb615755ef95b044291f7a83f19c75c5
+      internalID: 1054253728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 109
+        width: 98
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31245ed75453e1642906a759327f6c1c
+      internalID: -2036910309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_3
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 111
+        width: 72
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3125598549280ef4abfd8a72d27fbf82
+      internalID: 1356381236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 111
+        width: 36
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761ce6033ccae1143a2f660ec240a3f3
+      internalID: 656903635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 109
+        width: 74
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702371503104b4b4981a7dfddd1ba699
+      internalID: 1521723760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_6
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 110
+        width: 96
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651007a34070bdc4d93eed050defdda8
+      internalID: 1045329043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_7
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 111
+        width: 110
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab27dc63df3e75488a1fb396a25b822
+      internalID: -1279630305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monedas pixel art Negras_8
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 111
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc364db3d49fccf43bde1227e4b81811
+      internalID: 2140579919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -184,7 +373,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Monedas pixel art Negras_0: -539836695
+      Monedas pixel art Negras_1: 1054253728
+      Monedas pixel art Negras_2: -2036910309
+      Monedas pixel art Negras_3: 1356381236
+      Monedas pixel art Negras_4: 656903635
+      Monedas pixel art Negras_5: 1521723760
+      Monedas pixel art Negras_6: 1045329043
+      Monedas pixel art Negras_7: -1279630305
+      Monedas pixel art Negras_8: 2140579919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

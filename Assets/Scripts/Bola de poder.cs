@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class coin : MonoBehaviour
+public class Coin : MonoBehaviour
 {
 
      public AudioSource source;
 
-     public AudioClip coinSound;
+     public AudioClip powerSound;
 
     private BoxCollider2D boxCollider;
 
@@ -30,7 +30,7 @@ public class coin : MonoBehaviour
         if(collider.gameObject.tag == "Player")
     {
         /*puntos.SumarPuntos(cantidadPuntos);*/
-       source.PlayOneShot(coinSound);
+       source.PlayOneShot(powerSound);
        Destroy(gameObject);
     }
 

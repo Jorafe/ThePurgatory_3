@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     AudioSource source;
 
+    public AudioSource JumpSound;
+
    /* public Vector3 newPosition = new Vector3(50, 5, 0); */
 
     public float movementSpeed = 10;
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetBool("IsJumping", true);
+            JumpSound.Play();
         }
 
         if(inputHorizontal < 0 )
@@ -64,5 +67,10 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rBody.velocity = new Vector2(inputHorizontal * movementSpeed, rBody.velocity.y); //Cuando trabajamos con fisicas de forma continua, trabajamos en el FixedUpdate.
+    }
+
+    void Start()
+    {
+        JumpSound = GetComponent<AudioSource>();
     }
 }

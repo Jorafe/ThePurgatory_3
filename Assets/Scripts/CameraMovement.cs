@@ -9,6 +9,8 @@ public class CameraMovement : MonoBehaviour
 
     public Vector3 offset;
 
+    public Vector3 terrainOffset;
+
     public Vector2 minCameraPosition;
 
     public Vector2 maxCameraPosition;

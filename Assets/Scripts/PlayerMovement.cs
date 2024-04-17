@@ -14,7 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     AudioSource source;
 
-    public AudioSource JumpSound;
+    public AudioSource jumpSound;
+
+    
 
    /* public Vector3 newPosition = new Vector3(50, 5, 0); */
 
@@ -44,18 +46,20 @@ public class PlayerMovement : MonoBehaviour
         {
             rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetBool("IsJumping", true);
-            JumpSound.Play();
+            jumpSound.Play();
         }
 
         if(inputHorizontal < 0 )
         {
             render.flipX = true;
             anim.SetBool("IsRunning", true);
+            
         }
         else if(inputHorizontal > 0)
         {
             render.flipX = false;
             anim.SetBool("IsRunning", true);
+            
         }
         else
         {
@@ -71,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        JumpSound = GetComponent<AudioSource>();
+        jumpSound = GetComponent<AudioSource>();
     }
+    
 }

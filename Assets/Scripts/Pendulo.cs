@@ -22,7 +22,7 @@ public class Pendulo : MonoBehaviour
     {
         swingMove();
 
-        Debug.Log(rb.angularVelocity);
+        /*Debug.Log(rb.angularVelocity);*/
     }
 
     void swingMove()

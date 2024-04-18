@@ -7,14 +7,13 @@ public class HitEnemigo2D : MonoBehaviour
 
     
 
-    void OnTriggerEnter2D(Collider2D collition)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GetComponent<Collider>().CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            Destroy(collition.gameObject);
+            Destroy(collision.gameObject);
         }
     }
-
 
 
 

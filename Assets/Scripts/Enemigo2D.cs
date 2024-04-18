@@ -23,7 +23,7 @@ public class Enemigo2D : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        target = GameObject.Find("Player");
+        target = GameObject.Find("LIMBO");
     }
 
     public void Comportamientos()

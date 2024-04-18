@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource jumpSound;
 
+    public AudioSource runSound;
+
     
 
    /* public Vector3 newPosition = new Vector3(50, 5, 0); */
@@ -53,17 +55,20 @@ public class PlayerMovement : MonoBehaviour
         {
             render.flipX = true;
             anim.SetBool("IsRunning", true);
+            runSound.Play();
             
         }
         else if(inputHorizontal > 0)
         {
             render.flipX = false;
             anim.SetBool("IsRunning", true);
+             runSound.Play();
             
         }
         else
         {
             anim.SetBool("IsRunning", false);
+             runSound.Stop();
         }
 
     }

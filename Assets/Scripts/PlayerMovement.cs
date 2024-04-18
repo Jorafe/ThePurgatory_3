@@ -18,7 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource runSound;
 
+    public AudioSource deathSound; 
+
+  
     
+    private bool isDead = false;
 
    /* public Vector3 newPosition = new Vector3(50, 5, 0); */
 
@@ -55,22 +59,28 @@ public class PlayerMovement : MonoBehaviour
         {
             render.flipX = true;
             anim.SetBool("IsRunning", true);
-            runSound.Play();
+            /*runSound.Play();*/
             
         }
         else if(inputHorizontal > 0)
         {
             render.flipX = false;
             anim.SetBool("IsRunning", true);
-             runSound.Play();
+             /*runSound.Play();*/
             
         }
         else
         {
             anim.SetBool("IsRunning", false);
-             runSound.Stop();
+            /*runSound.Stop();*/
+            
         }
 
+
+       /* if (Input.GetKeyDown(KeyCode.K) && !isDead)
+        {
+            deathSound.Play();
+        }*/
     }
 
     void FixedUpdate()
@@ -81,6 +91,12 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         jumpSound = GetComponent<AudioSource>();
+
+       /* runSound = GetComponent<AudioSource>();
+        
+        deathSound = GetComponent<AudioSource>();*/
     }
     
-}
+  
+ }
+

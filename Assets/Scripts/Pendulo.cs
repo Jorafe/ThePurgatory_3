@@ -44,4 +44,12 @@ public class Pendulo : MonoBehaviour
             Destroy(collition.gameObject);
         }
     }
+     
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

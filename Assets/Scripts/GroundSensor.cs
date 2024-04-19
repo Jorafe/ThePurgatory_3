@@ -19,6 +19,14 @@ public class GroundSensor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        /*if(collider.gameObject.tag == "Subdits")
+        {
+            //Destroy(collider.gameObject);
+        MiniEnemy miniEnemy = collider.gameObject.GetComponent<Enemy>();
+            miniEnemy.SubditsDeath();
+        }*/
+
+
         isGrounded = true;
         anim.SetBool("IsJumping", false);
     }

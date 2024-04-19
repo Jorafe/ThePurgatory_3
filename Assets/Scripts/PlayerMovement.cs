@@ -18,9 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource runSound;
 
-    public AudioSource deathSound; 
-
-  
+    public AudioSource deathSound;
     
     private bool isDead = false;
 
@@ -75,12 +73,17 @@ public class PlayerMovement : MonoBehaviour
             /*runSound.Stop();*/
             
         }
-
-
-       /* if (Input.GetKeyDown(KeyCode.K) && !isDead)
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
-            deathSound.Play();
-        }*/
+            if (runSound != null)
+            {
+                runSound.Play();
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            runSound.Stop();
+        }
     }
 
     void FixedUpdate()

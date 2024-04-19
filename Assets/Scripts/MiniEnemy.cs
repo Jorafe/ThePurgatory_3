@@ -59,12 +59,12 @@ public class Goombas : MonoBehaviour
         if(collision.gameObject.tag == "Player")
     {
        Destroy(collision.gameObject);
-       SceneManager.LoadScene("Game Over");
+       //SceneManager.LoadScene("Game Over");
     }
    
     }
 
-    public void GoombaDeth()
+    public void SubditsDeath()
     {
         source.PlayOneShot(deathSound);
         boxCollider.enabled = false;

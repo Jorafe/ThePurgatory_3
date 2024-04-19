@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Subdits
+  - Player 2
+  - Player 3
+  - Player 4
   layers:
   - Default
   - TransparentFX

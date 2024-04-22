@@ -178,12 +178,12 @@ TextureImporter:
       name: Trampas pinchos plata_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 71
-        width: 396
-        height: 55
+        x: 0
+        y: 72
+        width: 94
+        height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,6 +191,69 @@ TextureImporter:
       bones: []
       spriteID: d7e32c4251815b54f972777b4a2166c6
       internalID: -2016803645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trampas pinchos plata_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 72
+        width: 98
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e790b44549c82f845abf2ea280db7109
+      internalID: -1991217237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trampas pinchos plata_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 72
+        width: 104
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c2d53a90926444da07fd74b3b4611b
+      internalID: 1022523261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trampas pinchos plata_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 72
+        width: 105
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94abf550e5181ad4b99626783a9f9284
+      internalID: 272091207
       vertices: []
       indices: 
       edges: []
@@ -207,6 +270,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Trampas pinchos plata_0: -2016803645
+      Trampas pinchos plata_1: -1991217237
+      Trampas pinchos plata_2: 1022523261
+      Trampas pinchos plata_3: 272091207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

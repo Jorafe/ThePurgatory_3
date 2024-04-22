@@ -11,9 +11,9 @@ public class coin : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
-    /*[SerializeField] private float cantidadPuntos;
+    //[SerializeField] private float cantidadPuntos;
 
-    [SerializeField] private Puntos puntos;*/
+    //[SerializeField] private Puntos puntos;
 
 
     // Start is called before the first frame update
@@ -28,11 +28,16 @@ public class coin : MonoBehaviour
     {
        
         if(collider.gameObject.tag == "Player")
-    {
-        /*puntos.SumarPuntos(cantidadPuntos);*/
-       source.PlayOneShot(coinSound);
-       Destroy(gameObject);
-    }
+        {
+          //puntos.SumarPuntos(cantidadPuntos);
+          Destroy(gameObject);
+          source.PlayOneShot(coinSound);
+          GameManager.Instance.GanarMoneda();
+        }
+    
+       
+       
+    
 
     }
 }

@@ -11,6 +11,8 @@ public class GroundSensor : MonoBehaviour
 
     PlayerMovement playerScript;
 
+    
+
     void Awake ()
     {
         anim = GetComponentInParent<Animator>();
@@ -19,12 +21,12 @@ public class GroundSensor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        /*if(collider.gameObject.tag == "Subdits")
+        if(collider.gameObject.tag == "Subdits")
         {
             //Destroy(collider.gameObject);
-        MiniEnemy miniEnemy = collider.gameObject.GetComponent<Enemy>();
-            miniEnemy.SubditsDeath();
-        }*/
+        MiniEnemy miniEnemy = collider.gameObject.GetComponent<MiniEnemy>();
+        miniEnemy.SubditsDeath();
+        }
 
 
         isGrounded = true;

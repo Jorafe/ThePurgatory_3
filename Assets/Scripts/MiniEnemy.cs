@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Goombas : MonoBehaviour
+public class MiniEnemy : MonoBehaviour
 {
     //private GameManager gameManager;
     
@@ -11,13 +11,15 @@ public class Goombas : MonoBehaviour
 
     private AudioSource source;
 
-    private BoxCollider2D boxCollider;
+    private CircleCollider2D circleCollider;
 
     public AudioClip deathSound;
 
     public float enemySpeed = 5;
 
     public float enemyDirection = 1;
+
+    public SpriteRenderer render;
 
     //rBodyGet = component<Rigidbody2D>();
     //source = <GetComponent>();
@@ -27,7 +29,8 @@ public class Goombas : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
+        render = GetComponent<SpriteRenderer>();
         //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         
     }
@@ -44,17 +47,19 @@ public class Goombas : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(CircleCollider2D collision)
     {
         if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Subdits")
     
         if(enemyDirection == 1)
         {
             enemyDirection = -1;
+            render.flipX = true;
         }
         else if(enemyDirection == -1)
         {
             enemyDirection = 1;
+            render.flipX = false;
         } 
         if(collision.gameObject.tag == "Player")
     {
@@ -67,7 +72,7 @@ public class Goombas : MonoBehaviour
     public void SubditsDeath()
     {
         source.PlayOneShot(deathSound);
-        boxCollider.enabled = false;
+        circleCollider.enabled = false;
         rBody.gravityScale = 0;
         enemyDirection = 0;
         Destroy(gameObject);

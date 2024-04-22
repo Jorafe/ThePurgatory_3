@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource deathSound;
     
     private bool isDead = false;
+
+
+    private int puntuacion;
+    public Text puntuacionText;
 
    /* public Vector3 newPosition = new Vector3(50, 5, 0); */
 
@@ -93,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        puntuacion = 0;
+        
         jumpSound = GetComponent<AudioSource>();
 
        /* runSound = GetComponent<AudioSource>();
@@ -100,6 +107,15 @@ public class PlayerMovement : MonoBehaviour
         deathSound = GetComponent<AudioSource>();*/
     }
     
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         if(collision.gameObject.tag == "BlackCoin")
+         {
+           puntuacion ++;
+           puntuacionText.text = puntuacion.ToString();  
+         }
+
+    }
   
  }
 

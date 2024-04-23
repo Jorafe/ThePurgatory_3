@@ -21,9 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource deathSound;
 
-    private bool isGravityInverted = false;
+    public GravityChange gravityChange;
 
-    private bool isDead = false;
+    //private bool isDead = false;
 
 
     private int puntuacion;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") & sensor.isGrounded == true) 
         {
-            if (isGravityInverted == true)
+            if (gravityChange.isGravityInverted)
             {
                 rBody.AddForce(Vector2.down * jumpForce, ForceMode2D.Impulse);
             }
@@ -100,11 +100,6 @@ public class PlayerMovement : MonoBehaviour
         {
             runSound.Stop();
         }
-    }
-
-    public void SetGravityInverted(bool inverted)
-    {
-        isGravityInverted = inverted;
     }
 
     void FixedUpdate()

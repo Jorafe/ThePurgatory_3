@@ -9,13 +9,12 @@ public class GravityChange : MonoBehaviour
 
     private GameObject player;
 
-    public PlayerMovement playerMovementScript;
+    public bool isGravityInverted = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag(playerTag);
-        playerMovementScript = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -23,10 +22,37 @@ public class GravityChange : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            Rigidbody2D playerRigidbody = player.GetComponent<Rigidbody2D>();
-            playerRigidbody.gravityScale *= -1;
-            player.transform.rotation = Quaternion.Euler(180, 0, 0);
-            playerMovementScript.SetGravityInverted(true);
+            
+            isGravityInverted = !isGravityInverted;
+            StartCoroutine(ChangeGravityWithDelay());
+            if(isGravityInverted == true)
+            {
+                player.transform.rotation = Quaternion.Euler(180, 0, 0);
+            }
+            else
+            {
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
+
+    IEnumerator ChangeGravityWithDelay()
+    {
+        Rigidbody2D playerRigidbody = player.GetComponent<Rigidbody2D>();
+        playerRigidbody.gravityScale *= -0.5f;
+
+        yield return new WaitForSeconds(0.25f);
+
+        if(isGravityInverted == true)
+        {
+            playerRigidbody.gravityScale = -2.5f;
+        }
+        else
+        {
+            playerRigidbody.gravityScale = 2.5f;
+        }
+
+        
+    }
+
 }

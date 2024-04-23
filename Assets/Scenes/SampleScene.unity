@@ -35457,6 +35457,7 @@ MonoBehaviour:
   jumpSound: {fileID: 635263642}
   runSound: {fileID: 635263641}
   deathSound: {fileID: 635263643}
+  gravityChange: {fileID: 0}
   puntuacionText: {fileID: 0}
   movementSpeed: 4
   jumpForce: 9
@@ -49798,7 +49799,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01871872, y: -0.24464494}
@@ -55134,7 +55135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -26, y: -94}
+  m_AnchoredPosition: {x: -136, y: -77.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &999599079
@@ -78765,7 +78766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  playerMovementScript: {fileID: 0}
+  isGravityInverted: 0
 --- !u!61 &1423938519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83564,6 +83565,7 @@ MonoBehaviour:
   jumpSound: {fileID: 1491272175}
   runSound: {fileID: 1491272174}
   deathSound: {fileID: 1491272173}
+  gravityChange: {fileID: 1423938518}
   puntuacionText: {fileID: 80203116}
   movementSpeed: 4
   jumpForce: 9

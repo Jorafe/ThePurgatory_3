@@ -10,7 +10,7 @@ public class Enemigo2D : MonoBehaviour
     public int direccion;
     public float speed_walk;
     public float speed_run;
-    public GameObject target;
+    public GameObject[] targets;
     public bool atacando;
 
     public float rango_vision;
@@ -23,86 +23,100 @@ public class Enemigo2D : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        target = GameObject.Find("LIMBO");
+        targets = GameObject.FindGameObjectsWithTag("Player");
     }
 
     public void Comportamientos()
     {
-        if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_vision && !atacando)
+        foreach (GameObject target in targets)
         {
-            anim.SetBool("run", false);
-            cronometro += 1 * Time.deltaTime;
-            if (cronometro >= 4)
+            if (target != null)
             {
-                rutina = Random.Range(0, 2);
-                cronometro = 0;
-            }
-            switch (rutina)
-            {
-                case 0:
-                    anim.SetBool("walk", false);
-                    break;
-
-                case 1:
-                    direccion = Random.Range(0, 2);
-                    rutina++;
-                    break;
-
-                case 2:
-
-                    switch (direccion)
+                if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_vision && !atacando)
+                {
+                    anim.SetBool("run", false);
+                    cronometro += 1 * Time.deltaTime;
+                    if (cronometro >= 4)
+                    {
+                        rutina = Random.Range(0, 2);
+                        cronometro = 0;
+                    }
+                    switch (rutina)
                     {
                         case 0:
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                            transform.Translate(Vector3.right * speed_walk * Time.deltaTime);
+                            anim.SetBool("walk", false);
                             break;
 
                         case 1:
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                            transform.Translate(Vector3.right * speed_walk * Time.deltaTime);
+                            direccion = Random.Range(0, 2);
+                            rutina++;
+                            break;
+
+                        case 2:
+
+                            switch (direccion)
+                            {
+                                case 0:
+                                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                                    transform.Translate(Vector3.right * speed_walk * Time.deltaTime);
+                                    break;
+
+                                case 1:
+                                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                                    transform.Translate(Vector3.right * speed_walk * Time.deltaTime);
+                                    break;
+                            }
+                            anim.SetBool("walk", true);
                             break;
                     }
-                    anim.SetBool("walk", true);
-                    break;
-            }
-        }
-        else
-        {
-            if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_ataque && !atacando)
-            {
-               if (transform.position.x < target.transform.position.x)
-               {
-                    anim.SetBool("walk", false);
-                    anim.SetBool("run", true);
-                    transform.Translate(Vector3.right * speed_run * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                    anim.SetBool("attack", false);
-               }
-               else
-               {
-                    anim.SetBool("walk", false);
-                    anim.SetBool("run", true);
-                    transform.Translate(Vector3.right * speed_run * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-                    anim.SetBool("attack", false);
-               }
-            }     
-            else
-            {
-                if (!atacando)
+                }
+                else
                 {
-                    if (transform.position.x < target.transform.position.x)
-                    {                        
-                        transform.rotation = Quaternion.Euler(0, 0, 0);                      
-                    }
+                    if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_ataque && !atacando)
+                    {
+                       if (transform.position.x < target.transform.position.x)
+                       {
+                            anim.SetBool("walk", false);
+                            anim.SetBool("run", true);
+                            transform.Translate(Vector3.right * speed_run * Time.deltaTime);
+                            transform.rotation = Quaternion.Euler(0, 0, 0);
+                            anim.SetBool("attack", false);
+                       }
+                       else
+                       {
+                            anim.SetBool("walk", false);
+                            anim.SetBool("run", true);
+                            transform.Translate(Vector3.right * speed_run * Time.deltaTime);
+                            transform.rotation = Quaternion.Euler(0, 180, 0);
+                            anim.SetBool("attack", false);
+                       }
+                    }     
                     else
-                    { 
-                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                    {
+                        if (!atacando)
+                        {
+                            if (transform.position.x < target.transform.position.x)
+                            {                        
+                                transform.rotation = Quaternion.Euler(0, 0, 0);                      
+                            }
+                            else
+                            { 
+                                transform.rotation = Quaternion.Euler(0, 180, 0);
+                            }
+                            anim.SetBool("walk", false);
+                            anim.SetBool("run", false);                    
+                        }
                     }
-                    anim.SetBool("walk", false);
-                    anim.SetBool("run", false);                    
                 }
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 3 && !atacando) 
+        {
+            direccion = (direccion == 0) ? 1 : 0;
         }
     }
 

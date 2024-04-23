@@ -9,10 +9,13 @@ public class GravityChange : MonoBehaviour
 
     private GameObject player;
 
+    public PlayerMovement playerMovementScript;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag(playerTag);
+        playerMovementScript = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class GravityChange : MonoBehaviour
             Rigidbody2D playerRigidbody = player.GetComponent<Rigidbody2D>();
             playerRigidbody.gravityScale *= -1;
             player.transform.rotation = Quaternion.Euler(180, 0, 0);
+            playerMovementScript.SetGravityInverted(true);
         }
     }
 }

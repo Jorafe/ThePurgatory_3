@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource runSound;
 
     public AudioSource deathSound;
-    
+
+    private bool isGravityInverted = false;
+
     private bool isDead = false;
 
 
@@ -53,12 +55,21 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") & sensor.isGrounded == true) 
         {
-            rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            if (isGravityInverted == true)
+            {
+                rBody.AddForce(Vector2.down * jumpForce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
+
             anim.SetBool("IsJumping", true);
             jumpSound.Play();
+
         }
 
-        if(inputHorizontal < 0 )
+        if (inputHorizontal < 0 )
         {
             render.flipX = true;
             anim.SetBool("IsRunning", true);
@@ -89,6 +100,11 @@ public class PlayerMovement : MonoBehaviour
         {
             runSound.Stop();
         }
+    }
+
+    public void SetGravityInverted(bool inverted)
+    {
+        isGravityInverted = inverted;
     }
 
     void FixedUpdate()

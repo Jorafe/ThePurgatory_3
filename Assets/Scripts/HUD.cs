@@ -6,16 +6,23 @@ using UnityEngine.SceneManagement;
 public class HUD : MonoBehaviour
 {
     public GameObject[] monedas;
-    
-    public void DesactivarVida(int indice)
+
+    void Start()
     {
-        vidas[indice].SetActive(false);
+        foreach (GameObject moneda in monedas)
+        {
+            moneda.SetActive(false);
+        }
     }
 
-    public void ActivarVida(int indice)
+    public void ActivarMoneda(int indice)
     {
-        vidas[indice].SetActive(true);
+        Debug.Log("Activando moneda en índice: " + indice);
+
+        if (indice >= 0 && indice < monedas.Length)
+        {
+            monedas[indice].SetActive(true);
+        }
     }
-    
-    
+
 }

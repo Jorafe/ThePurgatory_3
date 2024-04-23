@@ -6,28 +6,38 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
    
-   public static GameManager Instance {get; private set; }
+   public static GameManager Instance { get; private set; }
 
    public HUD hud;
 
-   public int monedas = 6;
+   public int moneditas;
 
-   //public HUD ActivarMoneda;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); // Destruye la instancia duplicada
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+    public void ConseguirMoneda()
+   {
+        if (moneditas == 6)
+        {
+            Debug.Log("Hay 6 monedas");
+            return;
+        }
+        else
+        {
+            hud.ActivarMoneda(moneditas);
+            moneditas += 1;
+        }
         
-    }
+   }
 
-    
-    public void RecuperarMoneda
 
-   
 }

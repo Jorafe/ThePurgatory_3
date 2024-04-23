@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class coin : MonoBehaviour
+public class CoinDorada : MonoBehaviour
 {
 
     public AudioSource source;
@@ -23,11 +23,9 @@ public class coin : MonoBehaviour
        
         if(collider.gameObject.tag == "Player")
         {
-          //puntos.SumarPuntos(cantidadPuntos);
-          //GameManager.Instance.ConseguirMoneda();
-          Destroy(gameObject);
+          GameManager.Instance.ConseguirMoneda();
           source.PlayOneShot(coinSound);
-          //GameManager.Instance.GanarMoneda();
+          Destroy(gameObject);
         }
     
        

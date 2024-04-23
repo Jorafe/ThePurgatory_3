@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 662209968488060849}
   - component: {fileID: 2920415000789884109}
   - component: {fileID: 7717113463893866288}
-  - component: {fileID: 5493322944861091628}
   - component: {fileID: 4970298987342437541}
+  - component: {fileID: 5807706899634925339}
   m_Layer: 0
   m_Name: Moneda Oro
   m_TagString: Untagged
@@ -108,20 +108,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5493322944861091628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722870813654530634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e55133e9382ff6d44a401c7e3c1b64d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  coinSound: {fileID: 8300000, guid: 7eabb26960b775d47806e22d0911c90f, type: 3}
 --- !u!61 &4970298987342437541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,3 +153,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.22}
   m_EdgeRadius: 0
+--- !u!114 &5807706899634925339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722870813654530634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002c6f86d102f774e9cff2490f8778a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  coinSound: {fileID: 8300000, guid: 7eabb26960b775d47806e22d0911c90f, type: 3}

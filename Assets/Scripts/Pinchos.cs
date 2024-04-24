@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pinchos : MonoBehaviour
 {
+
+    public PlayerMovement playerScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,7 @@ public class Pinchos : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            playerScript.Death();
             Destroy(collision.gameObject);
             //SceneManager.LoadScene("GameOverMenu");
         }

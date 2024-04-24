@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
 
-    public Transform playerTransform;
+    public Transform[] playerTransforms;
+    public Transform activePlayer;
 
     public Vector3 offset;
 
@@ -18,15 +19,15 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        activePlayer = playerTransforms[0];
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerTransform != null)
+        if(activePlayer != null)
         {
-            Vector3 desiredPosition = playerTransform.position + offset;
+            Vector3 desiredPosition = activePlayer.position + offset;
 
             float clampX = Mathf.Clamp(desiredPosition.x, minCameraPosition.x, maxCameraPosition.x);
             float clampY = Mathf.Clamp(desiredPosition.y, minCameraPosition.y, maxCameraPosition.y);

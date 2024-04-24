@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,13 +14,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator anim;
 
-    AudioSource source;
+    public AudioSource source;
 
     public AudioSource jumpSound;
 
     public AudioSource runSound;
 
-    public AudioSource deathSound;
 
     public GravityChange gravityChange;
 
@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isDeath = false;
 
+    public AudioClip deathSound;
+
 
     private int puntuacion;
     public Text puntuacionText;
@@ -60,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         /*source = GetComponent<AudioSource>();*/
+        source = GameObject.Find("sfxmanager").GetComponent<AudioSource>();
     }
     
     // Update is called once per frame
@@ -144,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void Shoot()
+    /*public void Shoot()
     {
         if(!canShoot)
         {
@@ -176,10 +179,12 @@ public class PlayerMovement : MonoBehaviour
             
             
         }
-   
-    Public void Death()
+    }
+   */
+    public void Death()
     {
-     deathSound.Play();
+        
+        source.PlayOneShot(deathSound);
 
         SceneManager.LoadScene(3);
 
@@ -188,24 +193,24 @@ public class PlayerMovement : MonoBehaviour
         //StopCoroutine("Die");
         //StopAllCoroutine();
     }
-
-    Public IEnumerator Die()
+    /*    
+    public IEnumerator Die()
     {
         isDeath = true;
 
-        deathSound.Stop();
+        source.PlayOneShot(deathSound);
 
         yield return new WaitForSeconds(3);
 
         //yield return Corrutine();
 
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
     }
 
-    Public IEnumerator Corrutine()
+    public IEnumerator Corrutine()
     {
         yield return new WaitForSeconds(2);
-    }
+    }*/
  }
- }
+ 
 

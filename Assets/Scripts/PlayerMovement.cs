@@ -64,6 +64,10 @@ public class PlayerMovement : MonoBehaviour
                 rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
 
+            /*foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsJumping", true);
+            }*/
             anim.SetBool("IsJumping", true);
             jumpSound.Play();
 

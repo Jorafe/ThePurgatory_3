@@ -25,6 +25,22 @@ public class PlayerMovement : MonoBehaviour
 
     //private bool isDead = false;
 
+    public Transform bulletSpawn;
+
+    public GameObject bulletPrefab;
+
+    private bool canShoot = true;
+
+    public float timer;
+
+    public float rateOffire = 1;
+
+    public Transform hitBox;
+
+    public float hitBoxRadius = 2;
+
+    public bool isDeath = false;
+
 
     private int puntuacion;
     public Text puntuacionText;
@@ -127,6 +143,69 @@ public class PlayerMovement : MonoBehaviour
          }
 
     }
-  
+
+    public void Shoot()
+    {
+        if(!canShoot)
+        {
+              foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsAttacking", true);
+            }
+            
+            timer += Time.deltaTime;
+
+            if(timer >= rateOffire)
+            {
+                canShoot = true;
+                timer = 0;
+            }
+            
+           
+        }
+        if(Input.GetKeyDown(KeyCode.F) && canShoot)
+        {
+            foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsAttacking", false);
+            }
+
+            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+
+            canShoot = false;
+            
+            
+        }
+   
+    Public void Death()
+    {
+     deathSound.Play();
+
+        SceneManager.LoadScene(3);
+
+        //StartCoroutine("Die");
+
+        //StopCoroutine("Die");
+        //StopAllCoroutine();
+    }
+
+    Public IEnumerator Die()
+    {
+        isDeath = true;
+
+        deathSound.Stop();
+
+        yield return new WaitForSeconds(3);
+
+        //yield return Corrutine();
+
+        SceneManager.LoadScene(0);
+    }
+
+    Public IEnumerator Corrutine()
+    {
+        yield return new WaitForSeconds(2);
+    }
+ }
  }
 

@@ -35,9 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float rateOffire = 1;
 
-    public Transform hitBox;
+    
 
-    public float hitBoxRadius = 2;
+    
 
     public bool isDeath = false;
 
@@ -68,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Shoot();
 
         inputHorizontal = Input.GetAxis("Horizontal"); //Los controladores se ponen en el Update
 
@@ -147,15 +149,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    /*public void Shoot()
+   void Shoot()
     {
         if(!canShoot)
         {
-              foreach(Animator animator in anim)
-            {
-                animator.SetBool("IsAttacking", true);
-            }
-            
             timer += Time.deltaTime;
 
             if(timer >= rateOffire)
@@ -163,24 +160,17 @@ public class PlayerMovement : MonoBehaviour
                 canShoot = true;
                 timer = 0;
             }
-            
-           
         }
         if(Input.GetKeyDown(KeyCode.F) && canShoot)
         {
-            foreach(Animator animator in anim)
-            {
-                animator.SetBool("IsAttacking", false);
-            }
-
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
             canShoot = false;
-            
-            
         }
     }
-   */
+
+    
+   
     public void Death()
     {
         

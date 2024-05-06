@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 24b137369eee3e9449670d071b831b11
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - AngryBirdsPixela
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bdee564906fdffe4aa957d9c0fbfde06, type: 3}
+  - {fileID: 12800000, guid: ec39f10716d500447a974199f15b36dd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

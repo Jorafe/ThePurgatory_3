@@ -1782,7 +1782,7 @@ GameObject:
   - component: {fileID: 40107351}
   - component: {fileID: 40107352}
   m_Layer: 0
-  m_Name: MiniEnemy
+  m_Name: MiniEnemy cielo
   m_TagString: Subdits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1849,7 +1849,7 @@ Transform:
   m_GameObject: {fileID: 40107346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.343, y: -3.986, z: 0}
+  m_LocalPosition: {x: -8.386, y: -3.986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65612,7 +65612,7 @@ GameObject:
   - component: {fileID: 1197556359}
   - component: {fileID: 1197556360}
   m_Layer: 0
-  m_Name: MiniEnemy
+  m_Name: MiniEnemy infierno
   m_TagString: Subdits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80893,6 +80893,8 @@ GameObject:
   - component: {fileID: 1463722962}
   - component: {fileID: 1463722961}
   - component: {fileID: 1463722960}
+  - component: {fileID: 1463722963}
+  - component: {fileID: 1463722964}
   m_Layer: 0
   m_Name: Portal Cielo
   m_TagString: Untagged
@@ -80982,12 +80984,69 @@ Transform:
   m_GameObject: {fileID: 1463722959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.852, y: -3.726, z: 0}
+  m_LocalPosition: {x: 70.43, y: -3.726, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1463722963
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463722959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16638184, y: -0.004880905}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4228572, y: 1.4228572}
+    newSize: {x: 1.4228572, y: 1.4228572}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.30526733, y: 1.2634082}
+  m_EdgeRadius: 0
+--- !u!114 &1463722964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463722959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35b424731056da4bbb54734fc928b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1463945981
 GameObject:
   m_ObjectHideFlags: 0
@@ -105312,6 +105371,8 @@ GameObject:
   - component: {fileID: 1918951582}
   - component: {fileID: 1918951581}
   - component: {fileID: 1918951580}
+  - component: {fileID: 1918951583}
+  - component: {fileID: 1918951584}
   m_Layer: 0
   m_Name: Portal Infierno
   m_TagString: Untagged
@@ -105383,7 +105444,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f3ef8a0e3efa5bd45b7cefe715f79686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.4228572, y: 1.4228572}
@@ -105401,12 +105462,69 @@ Transform:
   m_GameObject: {fileID: 1918951579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 70.852, y: -6.826, z: 0}
+  m_LocalPosition: {x: 70.43, y: -6.826, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!61 &1918951583
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918951579}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.15977097, y: -0.0073189735}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4228572, y: 1.4228572}
+    newSize: {x: 1.4228572, y: 1.4228572}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31916046, y: 1.2715979}
+  m_EdgeRadius: 0
+--- !u!114 &1918951584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918951579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35b424731056da4bbb54734fc928b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1919067081
 GameObject:
   m_ObjectHideFlags: 0

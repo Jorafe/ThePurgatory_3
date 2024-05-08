@@ -66,7 +66,7 @@ public class MiniEnemy : MonoBehaviour
        Destroy(collision.gameObject);
        //SceneManager.LoadScene("Game Over");
     }
-   
+
     }
 
     public void SubditsDeath()

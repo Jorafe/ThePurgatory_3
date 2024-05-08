@@ -21,6 +21,7 @@ public class MenuManager : MonoBehaviour
         scoreText.text = "Points: " + score.ToString();
     }
 
+
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Level 1");

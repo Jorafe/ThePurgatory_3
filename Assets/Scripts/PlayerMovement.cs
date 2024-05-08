@@ -92,14 +92,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (inputHorizontal < 0 )
         {
-            render.flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            //render.flipX = true;
             anim.SetBool("IsRunning", true);
             /*runSound.Play();*/
             
         }
         else if(inputHorizontal > 0)
         {
-            render.flipX = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            //render.flipX = false;
             anim.SetBool("IsRunning", true);
              /*runSound.Play();*/
             

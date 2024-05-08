@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class GravityChange : MonoBehaviour
 {
-    public GameObject limbo; // Objeto con el aspecto normal del personaje
-    public GameObject limbob; // Objeto con el aspecto alternativo del personaje
+    public SpriteRenderer limbo; // Objeto con el aspecto normal del personaje
+    public SpriteRenderer limbob; // Objeto con el aspecto alternativo del personaje
 
     public string playerTag = "Player";
 
-    private GameObject player;
+    public GameObject player;
 
     public bool isGravityInverted = false;
 
-    public CameraMovement cameraScript;
+    public Rigidbody2D playerRigidbody;
+
+    public PlayerMovement playerScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag(playerTag);
+        playerRigidbody = player.GetComponent<Rigidbody2D>();
+        playerScript = player.GetComponent<PlayerMovement>();
+
     }
 
     // Update is called once per frame
@@ -42,29 +46,25 @@ public class GravityChange : MonoBehaviour
 
     IEnumerator ChangeGravityWithDelay()
     {
-        Rigidbody2D playerRigidbody = player.GetComponent<Rigidbody2D>();
         playerRigidbody.gravityScale *= -0.5f;
 
         yield return new WaitForSeconds(0.25f);
 
         if(isGravityInverted == true)
         {
+            playerScript.xRotacion = 180;
             playerRigidbody.gravityScale = -2.5f;
-            player.transform.rotation = Quaternion.Euler(180, 0, 0);
-            limbo.SetActive(false);
-            limbob.SetActive(true);
-
-            cameraScript.activePlayer = cameraScript.playerTransforms[1];
-
+            player.transform.rotation = Quaternion.Euler(180, player.transform.eulerAngles.y, 0);
+            limbob.enabled = true;
+            limbo.enabled = false;
         }
         else
         {
+            playerScript.xRotacion = 0;
             playerRigidbody.gravityScale = 2.5f;
-            player.transform.rotation = Quaternion.Euler(0, 0, 0);
-            limbob.SetActive(false);
-            limbo.SetActive(true);
-
-            cameraScript.activePlayer = cameraScript.playerTransforms[0];
+            player.transform.rotation = Quaternion.Euler(0,  player.transform.eulerAngles.y, 0);
+            limbob.enabled = false;
+            limbo.enabled = true;
         }
 
         

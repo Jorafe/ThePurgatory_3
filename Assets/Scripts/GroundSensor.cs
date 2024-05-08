@@ -7,7 +7,7 @@ public class GroundSensor : MonoBehaviour
 {
     public bool isGrounded;
 
-    public Animator anim;
+    public Animator[] anim;
 
     PlayerMovement playerScript;
 
@@ -15,7 +15,7 @@ public class GroundSensor : MonoBehaviour
 
     void Awake ()
     {
-        anim = GetComponentInParent<Animator>();
+        //anim = GetComponentInParent<Animator>();
         playerScript = GetComponentInParent<PlayerMovement>();
     }
 
@@ -30,7 +30,10 @@ public class GroundSensor : MonoBehaviour
 
 
         isGrounded = true;
-        anim.SetBool("IsJumping", false);
+        foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsJumping", false);
+            }
     }
 
     void OnTriggerStay2D(Collider2D collider)

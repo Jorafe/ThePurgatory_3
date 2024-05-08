@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public SpriteRenderer render; 
 
-    public Animator anim;
+    public Animator[] anim;
 
     public AudioSource source;
 
@@ -35,9 +35,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float rateOffire = 1;
 
-    
+    public Transform hitBox;
 
-    
+    public float hitBoxRadius = 2;
 
     public bool isDeath = false;
 
@@ -56,11 +56,13 @@ public class PlayerMovement : MonoBehaviour
 
     public bool jump = false;
 
+    public float xRotacion;
+
     void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
         render = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         /*source = GetComponent<AudioSource>();*/
         source = GameObject.Find("sfxmanager").GetComponent<AudioSource>();
     }
@@ -68,8 +70,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Shoot();
 
         inputHorizontal = Input.GetAxis("Horizontal"); //Los controladores se ponen en el Update
 
@@ -85,30 +85,40 @@ public class PlayerMovement : MonoBehaviour
                 rBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
 
-            anim.SetBool("IsJumping", true);
+            foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsJumping", true);
+            }
             jumpSound.Play();
 
         }
 
         if (inputHorizontal < 0 )
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-            //render.flipX = true;
-            anim.SetBool("IsRunning", true);
+            transform.rotation = Quaternion.Euler(xRotacion, 180, 0);
+            foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsRunning", true);
+            }
             /*runSound.Play();*/
             
         }
         else if(inputHorizontal > 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            //render.flipX = false;
-            anim.SetBool("IsRunning", true);
+            transform.rotation = Quaternion.Euler(xRotacion, 0, 0);
+            foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsRunning", true);
+            }
              /*runSound.Play();*/
             
         }
         else
         {
-            anim.SetBool("IsRunning", false);
+            foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsRunning", false);
+            }
             /*runSound.Stop();*/
             
         }
@@ -151,10 +161,15 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-   void Shoot()
+    /*public void Shoot()
     {
         if(!canShoot)
         {
+              foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsAttacking", true);
+            }
+            
             timer += Time.deltaTime;
 
             if(timer >= rateOffire)
@@ -162,17 +177,24 @@ public class PlayerMovement : MonoBehaviour
                 canShoot = true;
                 timer = 0;
             }
+            
+           
         }
         if(Input.GetKeyDown(KeyCode.F) && canShoot)
         {
+            foreach(Animator animator in anim)
+            {
+                animator.SetBool("IsAttacking", false);
+            }
+
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
             canShoot = false;
+            
+            
         }
     }
-
-    
-   
+   */
     public void Death()
     {
         

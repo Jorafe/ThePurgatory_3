@@ -62,10 +62,10 @@ public class MiniEnemy : MonoBehaviour
             render.flipX = false;
         } 
         if(collision.gameObject.tag == "Player")
-    {
-       Destroy(collision.gameObject);
+         {
+             Destroy(collision.gameObject);
        //SceneManager.LoadScene("Game Over");
-    }
+         }
 
     }
 

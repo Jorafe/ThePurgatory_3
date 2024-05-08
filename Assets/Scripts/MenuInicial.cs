@@ -42,6 +42,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Ranking");
     }
 
+    public void LoadOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
     public void CloseGame()
     {
         Application.Quit();

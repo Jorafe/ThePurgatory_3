@@ -206,9 +206,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.53333336}
-    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.68235296}
-    m_SelectedColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.6509804}
+    m_HighlightedColor: {r: 0.9245283, g: 0.8842384, b: 0.14391243, a: 0.80784315}
+    m_PressedColor: {r: 1, g: 0.92694056, b: 0, a: 0.84313726}
+    m_SelectedColor: {r: 1, g: 0.9090909, b: 0, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.68235296}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -228,9 +228,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1506825057}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: LoadLevel1
+        m_MethodName: LoadOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -588,9 +588,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.53333336}
-    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.68235296}
-    m_SelectedColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.6509804}
+    m_HighlightedColor: {r: 0.9245283, g: 0.8842384, b: 0.14391243, a: 0.80784315}
+    m_PressedColor: {r: 1, g: 0.92694056, b: 0, a: 0.84313726}
+    m_SelectedColor: {r: 1, g: 0.9090909, b: 0, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.68235296}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -610,9 +610,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1506825057}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: LoadLevel1
+        m_MethodName: LoadRanking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1136,9 +1136,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.53333336}
-    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.68235296}
-    m_SelectedColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.6509804}
+    m_HighlightedColor: {r: 0.9245283, g: 0.8842384, b: 0.14391243, a: 0.80784315}
+    m_PressedColor: {r: 1, g: 0.92694056, b: 0, a: 0.84313726}
+    m_SelectedColor: {r: 1, g: 0.9090909, b: 0, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.68235296}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1506825057}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: CloseGame
         m_Mode: 1
@@ -1620,9 +1620,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
-    m_HighlightedColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.53333336}
-    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.68235296}
-    m_SelectedColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.6509804}
+    m_HighlightedColor: {r: 0.9245283, g: 0.8842384, b: 0.14391243, a: 0.80784315}
+    m_PressedColor: {r: 1, g: 0.92694056, b: 0, a: 0.84313726}
+    m_SelectedColor: {r: 1, g: 0.9090909, b: 0, a: 1}
     m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.68235296}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1506825057}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: LoadLevel1
         m_Mode: 1

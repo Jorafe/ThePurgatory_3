@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0df59124b429298468592d7d7b251d85
+guid: b35eb08a3bf6f784ba1fd989062874b0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -175,12 +175,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GO OUT_0
+      name: Sonido No_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 14
-        width: 121
+        x: 44
+        y: 22
+        width: 35
         height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb8a84579111604198f76adb9ba0fdc
-      internalID: 1246127723
+      spriteID: 162538f62e5e74f41925f3109214c463
+      internalID: 43235843
       vertices: []
       indices: 
       edges: []
@@ -206,7 +206,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GO OUT_0: 1246127723
+      Sonido No_0: 43235843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

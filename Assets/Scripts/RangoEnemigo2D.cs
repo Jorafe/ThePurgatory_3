@@ -5,7 +5,7 @@ using UnityEngine;
 public class RangoEnemigo2D : MonoBehaviour
 {
     public Animator ani;
-    public Enemigo2D enemigo;
+    public Enemigo2DInfierno enemigo;
 
     void OnTriggerEnter2D(Collider2D coll)
     {

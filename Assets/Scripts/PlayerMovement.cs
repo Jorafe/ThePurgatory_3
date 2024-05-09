@@ -63,13 +63,15 @@ public class PlayerMovement : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         render = GetComponent<SpriteRenderer>();
         //anim = GetComponent<Animator>();
-        /*source = GetComponent<AudioSource>();*/
+        //source = GetComponent<AudioSource>();
         source = GameObject.Find("sfxmanager").GetComponent<AudioSource>();
     }
     
     // Update is called once per frame
     void Update()
     {
+
+        Shoot();
 
         inputHorizontal = Input.GetAxis("Horizontal"); //Los controladores se ponen en el Update
 
@@ -161,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    /*public void Shoot()
+    public void Shoot()
     {
         if(!canShoot)
         {
@@ -194,13 +196,13 @@ public class PlayerMovement : MonoBehaviour
             
         }
     }
-   */
+   
     public void Death()
     {
         
         source.PlayOneShot(deathSound);
 
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Muerte");
 
         //StartCoroutine("Die");
 

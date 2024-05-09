@@ -24,9 +24,9 @@ public class Bullet : MonoBehaviour
        if(collider.gameObject.tag == "Subdits" || collider.gameObject.tag == "Enemy")
        {
          Destroy(collider.gameObject);
-       } 
-       
-       Destroy(gameObject);
+         Destroy(gameObject);
+        }
+
     }
 
     

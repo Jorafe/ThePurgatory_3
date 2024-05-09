@@ -11,7 +11,7 @@ public class MiniEnemy : MonoBehaviour
 
     private AudioSource source;
 
-    private CircleCollider2D circleCollider;
+    private BoxCollider2D boxCollider;
 
     public AudioClip deathSound;
 
@@ -29,7 +29,7 @@ public class MiniEnemy : MonoBehaviour
     {
         rBody = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
-        circleCollider = GetComponent<CircleCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         render = GetComponent<SpriteRenderer>();
         //gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         
@@ -41,38 +41,33 @@ public class MiniEnemy : MonoBehaviour
         rBody.velocity = new Vector2(enemyDirection * enemySpeed, rBody.velocity.y);
     }
 
-    public void LoadGameOver()
-    {
-        SceneManager.LoadScene("Game Over");
-    }
 
-
-    void OnCollisionEnter2D(CircleCollider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.layer == 3 ||collision.gameObject.tag == "Subdits")
-    
-        if(enemyDirection == 1)
         {
-            enemyDirection = -1;
-            render.flipX = true;
+            if (enemyDirection == 1)
+            {
+                enemyDirection = -1;
+                render.flipX = true;
+            }
+            else if (enemyDirection == -1)
+            {
+                enemyDirection = 1;
+                render.flipX = false;
+            }
         }
-        else if(enemyDirection == -1)
+        if (collision.gameObject.tag == "Player")
         {
-            enemyDirection = 1;
-            render.flipX = false;
-        } 
-        if(collision.gameObject.tag == "Player")
-         {
-             Destroy(collision.gameObject);
-       //SceneManager.LoadScene("Game Over");
-         }
-
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("Muerte");
+        }
     }
 
     public void SubditsDeath()
     {
         source.PlayOneShot(deathSound);
-        circleCollider.enabled = false;
+        boxCollider.enabled = false;
         rBody.gravityScale = 0;
         enemyDirection = 0;
         Destroy(gameObject);

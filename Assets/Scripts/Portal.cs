@@ -6,20 +6,11 @@ using UnityEngine.UI;
 
 public class Portal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Level 2");
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
     }
 }

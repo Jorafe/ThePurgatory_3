@@ -1778,9 +1778,9 @@ GameObject:
   - component: {fileID: 40107348}
   - component: {fileID: 40107347}
   - component: {fileID: 40107350}
-  - component: {fileID: 40107349}
   - component: {fileID: 40107351}
   - component: {fileID: 40107352}
+  - component: {fileID: 40107353}
   m_Layer: 0
   m_Name: MiniEnemy cielo
   m_TagString: Subdits
@@ -1855,41 +1855,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &40107349
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40107346}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.016703486, y: 0.004888475}
-  serializedVersion: 2
-  m_Radius: 0.16953003
 --- !u!95 &40107350
 Animator:
   serializedVersion: 5
@@ -1955,6 +1920,51 @@ MonoBehaviour:
   enemySpeed: 1
   enemyDirection: 1
   render: {fileID: 0}
+--- !u!61 &40107353
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40107346}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015129566, y: -0.008645296}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6, y: 0.5733333}
+    newSize: {x: 0.3, y: 0.28666666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.33631802, y: 0.3485551}
+  m_EdgeRadius: 0
 --- !u!1 &41415459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +2015,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022549868, y: -0.2908777}
+  m_Offset: {x: 0.021461591, y: -0.27864754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2016,7 +2026,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28484964, y: 0.15789628}
+  m_Size: {x: 0.24349171, y: 0.133436}
   m_EdgeRadius: 0
 --- !u!4 &41415462
 Transform:
@@ -2051,6 +2061,7 @@ MonoBehaviour:
   - {fileID: 1642032057}
   - {fileID: 2140100883}
   - {fileID: 635263640}
+  miniEnemy: {fileID: 40107352}
 --- !u!1 &41796982
 GameObject:
   m_ObjectHideFlags: 0
@@ -6955,7 +6966,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 899252428}
+    m_TransformParent: {fileID: 1987860329}
     m_Modifications:
     - target: {fileID: 1939484546527664238, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_Name
@@ -6963,15 +6974,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.872335
+      value: 33.43065
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8159227
+      value: 2.2450004
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5376797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7750,6 +7761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9852,6 +9867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (1)
@@ -13871,6 +13890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17046,7 +17069,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 899252428}
+    m_TransformParent: {fileID: 1987860329}
     m_Modifications:
     - target: {fileID: 1939484546527664238, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_Name
@@ -17054,15 +17077,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.320688
+      value: 51.878998
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2940774
+      value: -3.8649998
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5376797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24701,7 +24724,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 899252428}
+    m_TransformParent: {fileID: 1987860329}
     m_Modifications:
     - target: {fileID: 1939484546527664238, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_Name
@@ -24709,15 +24732,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.090689
+      value: 49.649002
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4340773
+      value: -2.0049999
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5376797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31000,6 +31023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (4)
@@ -33746,6 +33773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5654016703470038614, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8859517868418658065, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_3 (2)
@@ -35127,6 +35158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35232,12 +35267,7 @@ GameObject:
   - component: {fileID: 635263636}
   - component: {fileID: 635263635}
   - component: {fileID: 635263639}
-  - component: {fileID: 635263638}
-  - component: {fileID: 635263637}
   - component: {fileID: 635263640}
-  - component: {fileID: 635263642}
-  - component: {fileID: 635263641}
-  - component: {fileID: 635263643}
   m_Layer: 0
   m_Name: LIMBO
   m_TagString: Untagged
@@ -35312,84 +35342,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1300463652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &635263637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635263634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d44c595dea6156438d3437b7b99e510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rBody: {fileID: 0}
-  sensor: {fileID: 0}
-  render: {fileID: 0}
-  anim: []
-  source: {fileID: 0}
-  jumpSound: {fileID: 635263642}
-  runSound: {fileID: 635263641}
-  gravityChange: {fileID: 0}
-  bulletSpawn: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  timer: 0
-  rateOffire: 1
-  hitBox: {fileID: 0}
-  hitBoxRadius: 2
-  isDeath: 0
-  deathSound: {fileID: 635263643}
-  puntuacionText: {fileID: 0}
-  movementSpeed: 4
-  jumpForce: 9
-  jump: 0
-  xRotacion: 0
---- !u!61 &635263638
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635263634}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8f8cddaa22c15124d821cea6e2db1822, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02007842, y: 0.05488062}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.75}
-    newSize: {x: 0.64, y: 0.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.29465532, y: 0.64023876}
-  m_EdgeRadius: 0
 --- !u!50 &635263639
 Rigidbody2D:
   serializedVersion: 4
@@ -35438,294 +35390,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &635263641
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635263634}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a971dbd69d2a1ba46906b96dcc95c8a4, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.648
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &635263642
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635263634}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 90d9b8ce474350741b211fa108b2ce8d, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &635263643
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635263634}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5f3c67396cdcb2242a64cd6a206080da, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &637057432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36366,6 +36030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39387,6 +39055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39936,19 +39608,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 899252428}
+    m_TransformParent: {fileID: 1987860329}
     m_Modifications:
     - target: {fileID: 3341968798107235816, guid: 57d23f0cc22fd67499e5691d7b3037f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.19315
+      value: 33.75146
       objectReference: {fileID: 0}
     - target: {fileID: 3341968798107235816, guid: 57d23f0cc22fd67499e5691d7b3037f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8727636
+      value: 2.3018413
       objectReference: {fileID: 0}
     - target: {fileID: 3341968798107235816, guid: 57d23f0cc22fd67499e5691d7b3037f7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5376797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3341968798107235816, guid: 57d23f0cc22fd67499e5691d7b3037f7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43286,6 +42958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45751,6 +45427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45769,6 +45449,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (1)
@@ -48855,8 +48539,6 @@ Transform:
   - {fileID: 843319702}
   - {fileID: 839839750}
   - {fileID: 1443292672}
-  - {fileID: 722731113}
-  - {fileID: 140576117}
   - {fileID: 1362537306}
   - {fileID: 1528090475}
   - {fileID: 633389763}
@@ -48866,9 +48548,6 @@ Transform:
   - {fileID: 1720515163}
   - {fileID: 575798900}
   - {fileID: 1239443875}
-  - {fileID: 453495612}
-  - {fileID: 1381157243}
-  - {fileID: 331287722}
   - {fileID: 1095924974}
   - {fileID: 779938848}
   - {fileID: 1899365216}
@@ -50079,6 +49758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5654016703470038614, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8859517868418658065, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_3
@@ -52733,6 +52416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58613,7 +58300,7 @@ PrefabInstance:
     - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (5)
@@ -59402,6 +59089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -60920,6 +60611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -60930,6 +60625,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5603432470326147793, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
   m_PrefabInstance: {fileID: 1140304803}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1140321675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140321678}
+  - component: {fileID: 1140321677}
+  - component: {fileID: 1140321676}
+  m_Layer: 0
+  m_Name: Rango
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1140321676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140321675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bdd1c1e075d5b4380250db10e13d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ani: {fileID: 1461142688}
+  enemigo: {fileID: 1461142694}
+--- !u!61 &1140321677
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140321675}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.35924911, y: -0.064480305}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7420883, y: 0.8065586}
+  m_EdgeRadius: 0
+--- !u!4 &1140321678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140321675}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1461142690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140787469
 GameObject:
   m_ObjectHideFlags: 0
@@ -61369,7 +61156,7 @@ GameObject:
   - component: {fileID: 1145064145}
   - component: {fileID: 1145064147}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemigo Cielo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61436,7 +61223,7 @@ Transform:
   m_GameObject: {fileID: 1145064141}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.127525, y: 0.9686065, z: -0.007922001}
+  m_LocalPosition: {x: 34.1, y: 0.9686065, z: -0.007922001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67973,7 +67760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 1145064144}
-  enemigo: {fileID: 1145064147}
+  enemigo: {fileID: 0}
 --- !u!61 &1228893179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68509,6 +68296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71585,7 +71376,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5f3c67396cdcb2242a64cd6a206080da, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 90d9b8ce474350741b211fa108b2ce8d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -74895,6 +74686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76264,7 +76059,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 899252428}
+    m_TransformParent: {fileID: 1987860329}
     m_Modifications:
     - target: {fileID: 1939484546527664238, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_Name
@@ -76272,15 +76067,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.36701
+      value: 50.925323
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.399536
+      value: -2.9704585
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5376797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8136340196315537934, guid: 0b9b6396b7c522645bc5a667bdda8e39, type: 3}
       propertyPath: m_LocalRotation.w
@@ -80082,6 +79877,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (2)
@@ -81195,8 +80994,11 @@ GameObject:
   - component: {fileID: 1461142690}
   - component: {fileID: 1461142689}
   - component: {fileID: 1461142688}
+  - component: {fileID: 1461142693}
+  - component: {fileID: 1461142694}
+  - component: {fileID: 1461142695}
   m_Layer: 0
-  m_Name: Idle 1_0
+  m_Name: Enemigo Infierno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81284,12 +81086,110 @@ Transform:
   m_GameObject: {fileID: 1461142687}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 65.568, y: -6.775, z: 0}
+  m_LocalPosition: {x: 12.08, y: -6.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1140321678}
+  - {fileID: 1661220752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!50 &1461142693
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461142687}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1461142694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461142687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cf592a1172da04ba7f6997a20bef38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rutina: 0
+  cronometro: 0
+  anim: {fileID: 1461142688}
+  direccion: 0
+  speed_walk: 1.5
+  speed_run: 3
+  targets: []
+  atacando: 0
+  rango_vision: 3
+  rango_ataque: 1.001
+  rango: {fileID: 1140321675}
+  Hit: {fileID: 1661220749}
+--- !u!61 &1461142695
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461142687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84, y: 0.96}
+    newSize: {x: 0.84, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.84, y: 0.96}
+  m_EdgeRadius: 0
 --- !u!1 &1462307427
 GameObject:
   m_ObjectHideFlags: 0
@@ -83037,6 +82937,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5654016703470038614, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8859517868418658065, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_3 (1)
@@ -85425,6 +85329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89271,6 +89179,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (7)
@@ -91567,6 +91479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -92961,6 +92877,96 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6368579776107754712, guid: bf72dea25939a554db4a27c03a06eb8f, type: 3}
   m_PrefabInstance: {fileID: 1659971011}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1661220749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661220752}
+  - component: {fileID: 1661220751}
+  - component: {fileID: 1661220750}
+  m_Layer: 0
+  m_Name: Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1661220750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661220749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3624df4a78e9b4e4198a5a4d89055b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1661220751
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661220749}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0037841797, y: -0.44659495}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0218658, y: 0.21278143}
+  m_EdgeRadius: 0
+--- !u!4 &1661220752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661220749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1461142690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664218246
 GameObject:
   m_ObjectHideFlags: 0
@@ -94566,6 +94572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -95842,6 +95852,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (3)
@@ -98909,6 +98923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -100426,6 +100444,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0
@@ -104243,6 +104265,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (8)
@@ -104772,6 +104798,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0 (6)
@@ -105650,7 +105680,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.15977097, y: -0.0073189735}
@@ -109274,6 +109304,11 @@ Transform:
   - {fileID: 2045925119}
   - {fileID: 255954045}
   - {fileID: 500905716}
+  - {fileID: 722731113}
+  - {fileID: 140576117}
+  - {fileID: 453495612}
+  - {fileID: 1381157243}
+  - {fileID: 331287722}
   m_Father: {fileID: 1847184547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1989721085
@@ -109324,6 +109359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5654016703470038614, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8859517868418658065, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_3 (3)
@@ -117748,6 +117787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_1
       objectReference: {fileID: 0}
+    - target: {fileID: 9205734930729164021, guid: 75790a14cd9b6b54e9a8e48d3c000120, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -118042,6 +118085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampas pinchos plata_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7617990822004755636, guid: fcbe6340f613b2f47a040ae0164529bb, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -118060,6 +118107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 899252428}
     m_Modifications:
+    - target: {fileID: 6337845507993178, guid: 06dba27f3162e794999236fd4d558703, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8066772444301071641, guid: 06dba27f3162e794999236fd4d558703, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_0
@@ -118162,6 +118213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5654016703470038614, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1300463651}
     - target: {fileID: 8859517868418658065, guid: 60f19cea44d87254ca12ba1b914da8a8, type: 3}
       propertyPath: m_Name
       value: Trampas pinchos plata_3

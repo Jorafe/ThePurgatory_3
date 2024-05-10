@@ -11,6 +11,7 @@ TagManager:
   - Player 4
   - BlackCoin
   - GoldCoin
+  - Opciones
   layers:
   - Default
   - TransparentFX

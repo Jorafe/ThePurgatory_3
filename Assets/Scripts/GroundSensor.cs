@@ -26,6 +26,7 @@ public class GroundSensor : MonoBehaviour
         if(collider.gameObject.tag == "Subdits")
         {
             //Destroy(collider.gameObject);
+            miniEnemy = collider.GetComponent<MiniEnemy>();
             miniEnemy.SubditsDeath();
         }
 

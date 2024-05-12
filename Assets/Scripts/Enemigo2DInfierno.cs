@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum PlayerCharacer
+{
+    
+}
+
 public class Enemigo2DInfierno : MonoBehaviour
 {
     public int rutina;

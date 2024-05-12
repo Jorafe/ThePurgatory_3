@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class EntreEscenas : MonoBehaviour
 {
-    
+    public static EntreEscenas instance; 
 
-    private void awake()
+    private void Awake()
     {
         var noDestruirEntreEscenas = FindObjectsOfType<EntreEscenas>();
-        if (noDestruirEntreEscenas.Length > 1)
+
+        if(instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
-
-        DontDestroyOnLoad(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

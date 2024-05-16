@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Pendulo : MonoBehaviour
 {
@@ -42,6 +44,7 @@ public class Pendulo : MonoBehaviour
         if (GetComponent<Collider>().CompareTag("Player"))
         {
             Destroy(collition.gameObject);
+            SceneManager.LoadScene("Muerte");
         }
     }
      
@@ -50,6 +53,7 @@ public class Pendulo : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
+            SceneManager.LoadScene("Muerte");
         }
     }
 }

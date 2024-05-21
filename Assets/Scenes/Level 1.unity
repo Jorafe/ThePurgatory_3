@@ -28456,7 +28456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePlayer: {fileID: 1491272170}
-  offset: {x: 0, y: 0.5, z: -10}
+  offset: {x: 0, y: 1, z: -10}
   terrainOffset: {x: 0, y: 0, z: 0}
   minCameraPosition: {x: -7.52, y: -14.3}
   maxCameraPosition: {x: 67.67, y: 3.44}
@@ -72413,7 +72413,7 @@ Transform:
   m_GameObject: {fileID: 1300463650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.93, y: -3.972, z: 0}
+  m_LocalPosition: {x: 48.192, y: -3.158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
